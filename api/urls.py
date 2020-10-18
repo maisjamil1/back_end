@@ -10,8 +10,8 @@ router = routers.DefaultRouter()
 router.register('users', UserViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('shop/', ShopList.as_view(), name='shop'),
+    # path('', include(router.urls)),
+    path('', ShopList.as_view(), name='home'),
     path('details/<str:pk>/',views.details, name='details'),
     path('create/',views.create, name='create'),
     path('update/<str:pk>/',views.update, name='update'),

@@ -3,36 +3,36 @@ from django.db import models
 class Shop(models.Model):
     title = models.CharField(max_length=64)
     class Type(models.TextChoices):
-        cars = '1', "cars"
-        Electronics = '2', "Electronics"
-        Games = '3', "Games"
-        Fashion = '4', "Fashion"
-        Furniture = '5', "Furniture"
-        Real_Estate = '6', "Real Estate"
-        Food = '7', "Food"
-        Equipment = '8', "Equipment"
-        Books = '9', "Books"
-        pets = '10', "pets"
-        Business = '11', "Business - Industrial"
-        CraftsmenJobs = '12', " Craftsmen"
-        Electrician = '13', "Electrician services"
-        Travel = '14', "Travel - Tourism"
-        Medical = '15', "Medical Services"
-        Events = '16', "Events Services"
-        Teaching = '17', "Teaching & Training"
-        Others = '18', "Others"
+        cars =  "cars"
+        Electronics = "Electronics"
+        Games = "Games"
+        Fashion = "Fashion"
+        Furniture ="Furniture"
+        Real_Estate = "Real Estate"
+        Food ="Food"
+        Equipment = "Equipment"
+        Books = "Books"
+        pets = "pets"
+        Business = "Business - Industrial"
+        CraftsmenJobs = " Craftsmen"
+        Electrician = "Electrician services"
+        Travel = "Travel - Tourism"
+        Medical = "Medical Services"
+        Events = "Events Services"
+        Teaching ="Teaching & Training"
+        Others = "Others"
     type = models.CharField(
-        max_length=18,
+        max_length=1200,
         choices=Type.choices,
         default=Type.Others
     )
     # type = models.CharField(max_length=64)
     description= models.TextField()
     class Category(models.TextChoices):
-        goods = '1', "goods"
-        services = '2', "services"
+        goods =  "goods"
+        services = "services"
     category = models.CharField(
-        max_length=2,
+        max_length=200,
         choices=Category.choices,
         default=Category.goods 
     )
